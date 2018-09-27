@@ -17,11 +17,11 @@ function generateCharacterName () {
   var adjective = adjectives[Math.floor(Math.random()*adjectives.length)];
     // Step 2a - Store a random first noun into a variable named: 'firstNoun'
   // from the firstNouns array
-  var firstNoun = firstNouns[Math.floor(Math.random()*adjectives.length)];
+  var firstNoun = firstNouns[Math.floor(Math.random()*firstNouns.length)];
 
   // Step 2a - Store a random second noun into a variable named: 'secondNoun'
   // from the secondNouns array
-  var secondNoun = secondNouns[Math.floor(Math.random()*adjectives.length)];
+  var secondNoun = secondNouns[Math.floor(Math.random()*secondNouns.length)];
 
   // Step 2b - Use a ternary to establish if the adjective is empty
   // If it is, prepend "The" to the adjective using string interpolation
@@ -129,7 +129,7 @@ for(let tdLabelAndValue of valueAndLabel) {
 
 
   // Step 6f - Set the tdValue text to equal the value from 'value'
-  tdValue
+  tdValue.textContent = value;
 
 
  tr.appendChild(tdLabel);
@@ -140,6 +140,7 @@ for(let tdLabelAndValue of valueAndLabel) {
 
 // Step 7 - Select and store a random origin from the array origins.
 // Store it in a variable named 'story'
+var story = origins[Math.floor(Math.random()*origins.length)]; 
 
 
 // Step 7a - Replace the originH2 ':character:' content with our character name
