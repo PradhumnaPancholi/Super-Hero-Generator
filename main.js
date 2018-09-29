@@ -2,9 +2,9 @@
 // Argument: Accepts an array
 // Return: Returns a random element from the array
 
-function randomArrayElement (arr) {
+function randomArrayElement(arr) {
   // Step 1a - Return a random elment from the array
-  return arr [Math.floor(Math.random()*firstNouns.length)];
+  return arr [Math.floor(Math.random()*arr.length)];
 
 }
 
@@ -77,12 +77,10 @@ var power = powers[Math.floor(Math.random()*powers.length)];
 // argument.
 const characterType = ["superhero", "villain", "mercenary", "anti-hero"];
 // Store the returned value into a variable named 'type'
-var type = characterType[Math.floor(Math.random()*characterType.length)];
-
-
+var type = randomArrayElement(characterType);
 
 // Step 5 - Replace the h1 content ':character:' with your character's name
-h1.textContent = 'The Story of '+ character;
+h1.textContent = h1.textContent.replace(':character:', character);
 
 
 // Step 6 - Create a multidimensional array in this structure:
@@ -101,13 +99,11 @@ const valueAndLabel = [
 
 for(let tdLabelAndValue of valueAndLabel) {
   // Step 6a - Using destructuring, create 2 new variables named 'label' and 'value', and store the elements in tdLabelAndValue in them
-  let label = ['Character', 'Alter Ego', 'Power', 'Type'];
+  var label = ['Character', 'Alter Ego', 'Power', 'Type'];
   let [l1, l2, l3, l4] = label;
-  console.log(l2);
 
   var value = [character, alterEgo, power, type];
   let [v1, v2, v3, v4 ] = value;
-  console.log(v2);
 
   // Step 6b - Create a new 'tr' element
   // and store it in a variable named 'tr'
@@ -144,18 +140,22 @@ var story = origins[Math.floor(Math.random()*origins.length)];
 
 
 // Step 7a - Replace the originH2 ':character:' content with our character name
+originH2.textContent = originH2.textContent.replace(':character:', character);
 
 
 // Step 7b - Replace all instances of ':character:' in 'story' with our
 // character name
-
+story = story.replace(':character:', character);
 
 // Step 7c - Replace all instances of ':alterego:' in 'story' with our
 // alter ego
+story = story.replace(':alterego:', alterEgo);
 
 
 // Step 7d - Replace all instances of ':power:' in 'story' with our
 // power
+story = story.replace(':power:', power);
 
 
 // Step 7e - Output the story to the origin paragraph tag//
+originP.textContent = story;
