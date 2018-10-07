@@ -1,0 +1,18 @@
+td, h1, h2, p {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: #215072;
+}
+
+td {
+  text-transform: capitalize;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

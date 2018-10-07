@@ -67,7 +67,7 @@ const adjectives = [
 const origins = [
   "A strange insect fell from the ceiling. The insect bit :alterego:, giving them the power of :power: and turning them into :character:.",
   "A meteorite hit the earth and immediately disintegrated. :alterego: lay in the middle of the molten pit. Having been not been born of this earth, they were embued with the power of :power:, and became :character:.",
-  "A bright light filled the classroom vaporizing all the students except one: :alterego:. They were entrusted to be :character, and were given the power of :power:.",
+  "A bright light filled the classroom vaporizing all the students except one :alterego:. They were entrusted to be :character:, and were given the power of :power:.",
   "The truck careened into the side of the car, immediately exploding, covering the occupants in toxic waste. :alterego: emerged from the wreck and immediately became :character:! Using their power of :power:, they vowed to make a difference in the world."
 ]
 
