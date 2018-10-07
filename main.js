@@ -26,7 +26,7 @@ function generateCharacterName () {
   // Step 2b - Use a ternary to establish if the adjective is empty
   // If it is, prepend "The" to the adjective using string interpolation
   // Else, return an empty string
-  (adjective.length === 0) ? adjectives.push("The") : " "
+  (adjective.length === 0) ? adjectives.push("The") : " ";
     
   // Step 2c - Return a string by first placing adjective, firstNoun
   // and secondNoun into an array, and then using the join array
@@ -99,11 +99,8 @@ const valueAndLabel = [
 
 for(let tdLabelAndValue of valueAndLabel) {
   // Step 6a - Using destructuring, create 2 new variables named 'label' and 'value', and store the elements in tdLabelAndValue in them
-  var label = ['Character', 'Alter Ego', 'Power', 'Type'];
-  let [l1, l2, l3, l4] = label;
-
-  var value = [character, alterEgo, power, type];
-  let [v1, v2, v3, v4 ] = value;
+  var label, value
+  [label, value] = tdLabelAndValue;
 
   // Step 6b - Create a new 'tr' element
   // and store it in a variable named 'tr'
